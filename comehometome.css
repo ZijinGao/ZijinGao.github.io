@@ -1,0 +1,82 @@
+body{
+	overflow-x: hidden;
+	font-family: 'Lato', sans-serif;
+	background-color: #242424;
+	border: 0;
+	margin: 0;
+	padding: 0;
+
+	text-align: left;
+	color: #DEDEDE;
+	font-weight: lighter;
+
+}
+a:link{
+	text-decoration:none;
+}
+a:visited{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+a:active{
+	text-decoration: none;
+}
+img{
+	width: 55vw;
+}
+
+#left{
+	position: fixed;
+	display: flex;
+	font-weight: lighter;
+	margin-left: 5vw;
+	flex-direction: column;
+	align-items: left;
+	
+
+}
+#logo{
+	width: 250px;
+}
+#sideindex{
+	margin-top: 10vh;
+
+}
+#links{
+	margin-top: 10vh;
+	
+}
+#about{
+	text-align: left;
+}
+#github{
+	width: 30px;
+}
+
+#right{
+	display: flex;
+	margin-left: 30vw;
+	flex-direction: column;
+}
+#topinstance{
+	margin-top: 5vh;
+}
+.instance{
+
+}
+#name{
+	font-size: 2rem;
+}
+.coverpic{
+}
+.coverpic:hover{
+}
+.coverdes{
+	color: #DEDEDE;
+	margin-top: 1vh;
+	margin-bottom: 5vh;
+
+	width: 55vw;
+}

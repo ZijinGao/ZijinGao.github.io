@@ -1,0 +1,164 @@
+body{
+	background-color: black;
+	background-image: url("assets/appetizer3_ps.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: 50%,50%;
+	background-size: 100vw;
+	margin: 0;
+	padding: 0;
+	border:0;
+}
+
+a:link{
+	color: white;
+	text-decoration: none;
+}
+
+.instruction{
+	font-weight: bolder;
+}
+.text{
+	font-family: 'Overlock', cursive;
+	color: rgb(215,215,215);
+	text-align: center;
+}
+
+#container{
+	display: flex;
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: baseline;
+
+	background-image: linear-gradient(to right,rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+	width: 100vw;
+	height: 100vh;
+}
+
+#upper{
+	display: flex;
+	flex-direction: row;
+	height: 80%;
+	width: 100%;
+
+}
+
+header{
+	text-align: center;
+	margin-top: 20vh;
+
+	width: 40%;
+	font-size: calc(10px + 0.8vw);
+	font-weight: bolder;
+}
+
+#content{
+	text-align: right;
+	margin-top: 20vh;
+	margin-right: 5vw;
+
+	width: 60%;
+	font-size: calc(10px + 0.6vw);
+	line-height: 1.5em;
+}
+
+#bottom{
+	display: flex;
+	flex-direction: row;
+	margin-top: 3%;
+	height: 20%;
+	width: 100%;
+	
+}
+
+#homepage{
+	text-align: center;
+	font-size: calc(10px + 0.8vw);
+	width: 40%;
+}
+
+#next{
+	width: 60%;
+	margin-right: 5vw;
+	text-align: right;
+	font-size: calc(10px + 0.8vw);
+	
+}
+
+@media screen and (max-width: 1000px) {
+	#upper{
+		display: flex;
+		flex-direction: column;
+		height: 70%;
+	}
+	header{
+		text-align: center;
+		margin-top: 10vh;
+		margin-left: 25%;
+		width: 50%;
+		font-size: calc(10px + 0.8vw);
+		font-weight: bolder;
+	}
+	#content{
+		margin-top: 2vh;
+		margin-left: 25%;
+		width: 50%;
+		line-height: 1.5em;
+		text-align: center;
+	}
+    #bottom{
+    	width: 50%;
+    	margin-left: 25%;
+    	margin-top: 0;
+    	height:30%;
+    	align-items: center;
+    }
+    #homepage{
+    	width: 50%;
+    }
+    #next{
+    	width: 50%;
+    	margin-right: 0;
+    	text-align: center;
+    }
+}
+
+@media screen and (max-width: 321px) {
+	#upper{
+		display: flex;
+		flex-direction: column;
+		/*margin-top: 20vh;*/
+		height: 60%;
+	}
+	header{
+		text-align: center;
+		margin-top: 5vh;
+		margin-left: 25%;
+		width: 50%;
+		font-size: calc(10px + 0.8vw);
+		font-weight: bolder;
+	}
+	#content{
+		margin-top: 2vh;
+		margin-left: 25%;
+		width: 50%;
+		line-height: 1.2em;
+		text-align: center;
+	}
+    #bottom{
+    	width: 50%;
+    	margin-left: 25%;
+    	height: 40%;
+    	align-items: center;
+    	margin-top: 3%;
+    }
+    #homepage{
+    	width: 50%;
+    }
+    #next{
+    	width: 50%;
+    	margin-right: 0;
+    	text-align: center;
+    }
+}

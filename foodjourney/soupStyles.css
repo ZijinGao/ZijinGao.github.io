@@ -1,0 +1,137 @@
+body{
+	background-color: black;
+	background-image: url("assets/soup3_c.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: 50%,50%;
+	background-size: 100% auto;
+	overflow-x: hidden; 
+	margin: 0;
+	padding: 0;
+	border:0;
+}
+
+a:link{
+	color: rgb(215,215,215);
+	text-decoration: none;
+}
+
+.instruction{
+	font-weight: bolder;
+}
+.text{
+	font-family: 'Overlock', cursive;
+	color: rgb(220,220,220);
+	text-align: center;
+}
+
+#container{
+	display: flex;
+	flex-direction: column;
+
+	background-image: linear-gradient(to right,rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	border:0;
+}
+
+#upper{
+	display: flex;
+	flex-direction: row;
+	width: 50%;
+	height: 20%;
+}
+
+header{
+	text-align: center;
+	align-self: center;
+
+	width: 50%;
+	font-size: calc(10px+0.8vw);
+	font-weight: bolder;
+}
+
+#middle{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	height: 60%;
+	overflow-y: scroll;
+}
+
+#content{
+	text-align: left;
+	width: 90%;
+
+	margin-left: 10%;
+	font-size: calc(10px + 0.6vw);
+	line-height: 2em;
+}
+
+.example{
+	margin-top: 5%;
+	margin-left: 10%;
+	margin-bottom: 5%;
+	width: 35%;
+}
+
+aside{
+	width: 100%;
+}
+
+#videos{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+#bottom{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 50%;
+	height: 20%;	
+}
+
+#homepage{
+	text-align: left;
+	align-self: center;
+	width: 50%;
+	margin-left: 10%;
+
+	font-size: calc(10px + 0.8vw);	
+}
+
+#next{
+	text-align: right;
+	width: 50%;
+	font-size: calc(10px + 0.8vw);
+}
+
+@media screen and (max-width: 700px){
+	#upper{
+		width: 100%;
+	}
+
+	#middle{
+		width: 100%;
+	}
+
+	#content{
+		line-height: 1.2em;
+	}
+
+	#bottom{
+		width: 100%;
+	}
+
+	#homepage{
+		text-align: center;
+		margin-left: 0;
+	}
+	#next{
+		text-align: center;
+	}
+}

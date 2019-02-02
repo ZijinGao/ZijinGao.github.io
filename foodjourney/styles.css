@@ -1,0 +1,123 @@
+body{
+	background-color: black;
+	background-image: url("assets/platespoon_cc.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: 50%,50%;
+	background-size: 100vw;
+	overflow-x: hidden;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	border:0;
+}
+
+.text{
+	font-family: 'Overlock', cursive;
+	color: rgb(215,215,215);
+	text-align: center;
+
+}
+
+#container{
+	background-color: rgba(0,0,0,0.5);
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+
+section{
+	margin: auto;
+	width: 50%;
+
+}
+
+#intro{
+	/*margin: auto;*/
+	width: 100%;
+
+	font-size: calc(10px + 0.6vw);
+	line-height: 2em;
+}
+
+li{
+	display: inline;
+}
+
+a{
+	color: #D7D7D7;
+	text-decoration: none;
+}
+a:link{
+	color: #D7D7D7;
+}
+a:visited{
+	text-shadow: 0 0 3px darkblue;
+}
+a:hover{
+	color: white;
+}
+a:active{
+	color: darkgreen;
+}
+
+footer{
+	margin: auto;
+	width: 100%;
+
+}
+
+#dishes{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	/*margin: auto;*/
+	/*width: 100%;*/
+
+	color: rgb(215,215,215);
+	font-size: calc(10px + 0.8vw);
+}
+
+#appetizer{
+	flex-grow: 1;
+	text-align: center;
+}
+
+#soup{
+	flex-grow: 1;
+	text-align: center;
+}
+
+#maindish{
+	flex-grow: 1;
+	text-align: center;
+}
+
+#dessert{
+	flex-grow: 1;
+	text-align: center;
+}
+
+.placer{
+	flex-grow: 1;
+	color: rgba(0,0,0,0);
+	text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+	#intro{
+		line-height: 1.5em;
+	}
+
+    #dishes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    footer{
+		width: 100%;
+
+	}
+}
+

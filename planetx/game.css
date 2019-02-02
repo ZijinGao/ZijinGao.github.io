@@ -1,0 +1,38 @@
+body{
+	overflow-x: hidden;
+	margin:0;
+	margin-top:20px;
+	padding: 0;
+	border: 0;
+}
+.text{
+	font-family: 'Rosario', sans-serif;
+	font-size: 2vw;
+}
+#p5con{
+	padding: 0;
+	margin:0;
+	border:0;
+	/*height: 600px;*/
+}
+#container{
+	/*display:flex;*/
+	/*flex-direction: row;*/	
+}
+#icons{
+	float:right;
+	margin-right: 10vw;
+	margin-top: 40vh;
+}
+.icon{
+	border-radius: 5px;
+}
+#nuclear{
+	cursor: pointer;
+}
+#forest{
+	cursor: pointer;
+}
+#water{
+	cursor: pointer;
+}

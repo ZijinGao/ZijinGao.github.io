@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dessert</title>
+	<link rel="stylesheet" type="text/css" href="dessertStyles.css">
+	<link href="https://fonts.googleapis.com/css?family=Overlock" rel="stylesheet">
+</head>
+
+<body>
+	<div id="cover"></div>
+	<div id="container">
+		<div id="upper">
+			<div id="left">
+				<header id="d" class="text">
+					Dessert
+				</header>
+				<article id="intro" class="text">
+					Now our dinning experience has come to an end.<br>
+					I hope our web project can make you think more on food choice next time you turn on the stove in your kitchen or pick up the asparagus in the market. <br><br>
+					The last part is a short survey as well as a small gift that we provide you!<br> We will give out 800 fruit cakes make from organic raw materials! <br>Please fill in the form so that we can deliver it to you :)<br><br>
+				</article>
+			</div>
+			<form action="#" method="post" class="text" id="surveyForm">
+					<fieldset>
+						<legend>Quick Survey</legend>
+						<label for="feedback">Feedback</label><br>
+						How do you like this dining experience? <br>
+						(10 for very good, 0 for very bad)
+						<input type="range" name="feedback" id="feedback" min="0" max="10">
+					</fieldset>
+					<fieldset>
+						<legend>Personal Info</legend>
+						<label for="firstname">First name</label>
+						<input type="text" name="firstname" id="firstname"><br>
+
+						<label for="lastname">Last name</label>
+						<input type="text" name="lastname" id="lastname"><br>
+
+						<label for="birthday">Birthday</label>
+						<input type="date" name="birthday" id="birthday" max="2018-09-16"><br>
+
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email"><br>
+
+						<label for="address">Address</label>
+						<textarea rows="4" cols="40" name="address" id="address"></textarea>
+					</fieldset>
+					<fieldset>
+						<legend>Cake Options</legend>
+						<label for="flavor">Flavor</label>
+						<select id="flavor">
+							<optgroup label="mild">
+								<option value="plain">Plain</option>
+								<option value="vanilla">Vanilla</option>
+							</optgroup>
+							<optgroup label="stronger">
+								<option value="chochlate">Chocolate</option>
+								<option value="strawberry">Strawberry</option>
+							</optgroup>
+						</select><br>
+
+						<label for="topping">Toppings</label><br>
+						<input type="checkbox" name="topping" value="Almond" id="almond"> almond<br>
+						<input type="checkbox" name="topping" value="Banana" id="banana"> banana<br>
+						<input type="checkbox" name="topping" value="Cranberry" id="cranberry"> cranberry<br>
+						<input type="checkbox" name="topping" value="Syrup" id="syrup"> maple syrup<br>
+						<input type="checkbox" name="topping" value="Lemon" id="lemon"> lemon<br>
+						<input type="checkbox" name="topping" value="Matcha" id="matcha"> matcha powder<br>
+
+						<label for="number">habitual toppings number</label><br>
+						<input type="number" min="0" max="6" name="number" id="number"><br>
+
+						<label for="candle">Candles</label><br>
+						<input type="radio" name="candle" id="candle">Yes
+						<input type="radio" name="candle" id="candle">No<br>
+
+						<label for="wishes">Any words that you want to put on the cake</label><br>
+						<textarea rows="4" cols="40" name="address" id="address"></textarea><br>
+
+						<label for="color">Theme color for the cake</label>
+						<input type="color" name="color" id="color">
+					</fieldset><br>
+
+					<button type="submit" form="surveyForm" value="Submit" id="submit">Submit</button><br>
+			</form>
+		</div>
+		<div id="bottom">
+			<a href="index.html" id="homepage" class="text instruction">Home</a>
+			<a href="soup.html" id="next" class="text instruction">Soup</a>
+		</div>
+	</div>
+
+	
+
+</body>
+</html>

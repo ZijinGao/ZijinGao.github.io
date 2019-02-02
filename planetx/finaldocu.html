@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Midterm full Documentation</title>
+	<link rel="stylesheet" type="text/css" href="finaldocu.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
+</head>
+<body>
+	<div id="container">
+		<div id="heading" class="text">Midterm Documentation</div>
+		<div id="description" class="text">
+			<span style="font-size: 2vw"><strong>Concept and Inspiration:</strong></span><br>
+
+			Planet X is created based on the concept of Will Android Dream of Electronic Sheep?  It aims to enable players to explore the notion of balance in the world we live in, in spite of its background set in A.C. 2049 in a parallel university from our world. <br><br>
+			On Planet X, there are three kinds of resources: <em>TREE</em>, <em>WATER</em> and <em>ATOMIC ENERGY</em> to be utilized. After the energy they respectively accumulated reach a balance, there will be Planet X inhabitants coming out. Once the balance is off, for example there are too much waste accumulated that it becomes detrimental to the inhabitants, there will be no more babies born. The moment that the population declines to 0, Planet X becomes dead again, and player will be noticed of the time duration that they brought Planet X back to life, as well as the total population that were born into the Planet X.  
+			<br><br>
+
+			<span style="font-size: 2vw"><strong>Developing Process:</strong></span><br>
+			<strong>Stage 1:</strong><br>
+			Setting the gameplay: the world outlook and rules.<br>
+			<strong>Elements: </strong>nuclear, forest, water<br>
+			<strong>Properties: </strong><br>
+			<strong>Balance: </strong><br>
+			<img src="assets/illustration.jpg" style="height:20vw;"><br>
+			<strong>Inhabitants: </strong><br>
+			consumes hitpoint to keep alive;
+			when getting close to forest and water, regain hitpoint;<br> 
+			when close to the nuclear area, lose hitpoints faster, get shaky, try to escape;<br>
+			when the elements are in balance, start to come out; when the balance is broken, stop coming out;<br>
+			The last one’s death in an un-balanced state brings an end to the game;<br><br>
+
+			<strong>Stage 2:</strong><br>
+			Implement the functions.<br><br>
+
+			<span style="font-size: 2vw"><strong>Challenges:</strong></span><br>
+			<em>-	Typing effect and corresponding sound effect.</em><br>
+			Solved it by: putting all the words that need to be displayed in a very long string, with all of the blank space and line feed in it. Split the string into array, and display the array content. Sound plays a very important rule in setting the whole feeling and atmosphere, so I edited a found typewriter soundtrack and made it pause corresponding to the typewriter visual effect.<br><br>
+			<em>-	Visual of forest/water/nuclear area evolve.</em><br>
+			Setting the initial value that the cell of water source, forest and nuclear has, the flow amount that each cell passes on to its 4 neighbor cells. During the process of resource transporting, there is some amount of them getting evaporated. The use of HSB color mode enables the lightness of every grid to grow proportionally with the dominant amount of the element out of four (natural energy, nuclear energy, sanitation, nuclear waste).<br><br>
+			<em>-	The legend (indicator)</em><br>
+			Created using vertex(), beginShape() and endShape(), and map the values onto the axis.<br><br>
+
+			<span style="font-size: 2vw"><strong>Lessons to take away:</strong></span><br>
+			I. Always start with the basic logic first and then get down to building the game technically. <br><br>
+			<img src="assets/illustration2.jpg" style="height:40vw;"><br><br>
+			II. A good game should be complete and intuitive. <br>Complete means that it has a solid playable version with an opening and ending; Intuitive means that the interaction required of the player needs to be intuitive.<br><br>
+			III. Naming of variables should be as organized as possible.<br> I can anticipate that when building a very large and complicated game, variable names could be easily mistaken, which could be the potential reason for bugs in the program.<br><br>
+			IV. 90-90 rules. <br>Although this is a universal rule in computer science field, I still feel the need to emphasis it here. There could be sometime when it seems that the project is almost done, but in the end the rest of the things will still take up a big chunk of your time to finish. Therefore, it is always a good idea to start early.<br><br>
+			V. Run enough user tests in order to improve the game.<br> As designers/developers, we tend to ignore places that are not intuitive or have other problems. So we need another pair of eyes to inspect the game to make it into a better one.<br><br>
+
+
+
+			
+		</div>
+		<div id="process" class="text">
+			<span style="font-size: 2vw"><strong>Building Process</strong></span><br>
+			To start with, I built on Professor Kapp's sample code and was able to plant one single element onto the canvas. I started from the nuclear station and they looked and evolved like below in a rapid speed:<br><br>
+			<div class="imgGroup">
+				<img src="assets/1-1.png" class="image">
+				<img src="assets/1-2.png" class="image">
+				<img src="assets/1-3.png" class="image">
+				<img src="assets/1-4.png" class="image">
+				<img src="assets/1-5.png" class="image">
+			</div><br>
+			I also put up text on each grid so that I know the value of nuclear waste for every grid and can tell whether the program is working in the right way： <br><br>
+			<div class="imgGroup">
+				<img src="assets/1-6.png" class="image">
+				<img src="assets/1-7.png" class="image">
+			</div><br>
+			The yellow "X" on the grids were to stand for holes created because of nuclear radiation. These areas are permanently disabled from becoming any kinds of area later in the game. <br><br>
+			Now the game looks fine, but it can only bring users a destroied world no matter how the user design their landscape. Now I have to implement the three elements all into the game. <br>
+			After some update, the game now looks like this:<br><br>
+			<div class="imgGroup">
+				<img src="assets/2-1.png" class="image">
+				<img src="assets/2-2.png" class="image">
+				<img src="assets/2-3.png" class="image">
+				<img src="assets/2-4.png" class="image">
+			</div><br>
+			The problem now is that there seems to be some problem with color. For the convenience of debugging, I set the parameters of water, forest and nuclear all to the same value, yet on the screen the nuclear waste seems to be conquering all over the canvas. I was not sure whether it was because I mapped the value to the opacity of each area's designated color and for different color they have different visibility on black even when their opacity are the same, for example (assuming) (255,0,0,0.5) is easier to be distinguished against black than (0,255,0,0.5); <br><br>
+			I solved the problem by switching color mode to HSB. Now I only need to map the values proportional to the "B" value of each area. Now the landscape looks like this. <br><br>
+			<div class="imgGroup">
+				<img src="assets/2-1.png" class="image">
+				<img src="assets/2-2.png" class="image">
+				<img src="assets/2-3.png" class="image">
+				<img src="assets/2-4.png" class="image">
+			</div><br>
+			After that, one of the main problem was that nuclear radiation would only go right like this: <br><br>
+			<div class="imgGroup">
+				<img src="assets/right1.png" class="image">
+				<img src="assets/right2.png" class="image">
+			</div><br><br>
+			It seems to be quite weird because the logic behind the variation of nuclear area is exactly the same as water and forest's. So I digged into that and found that there was a miss- matching along with a miss-spelling with variable names ("nuclear-energy" and "nature-energy" looks too alike and I had them confused in some places).<br><br>
+
+			The rest of the part of building the game was more time-consuming and complicated than hard. There were a lot of details to tend to for the interface of the game, for example, the critical point of each of the elements that defines the balance range, the way that the figure moves when they are near nuclear, and so on.<br><br>
+
+			Lastly, in order to create the immersive feeling of the game as a whole, I designed it to be a mission-driven type of game and gives the player the game setting as well as the instructions all at the beginning scene. As I mentioned above, I customised the type writter sound effect.<br>
+
+			Some final look of the game interface are:
+
+			<div class="imgGroup">
+				<img src="assets/whole.png"  id="image1">
+				<img src="assets/legend.png" class="image">
+			</div><br><br>
+			A demo video:<br>
+			<video style="height:40vw; width: 60vw;" controls>
+    			<source src="assets/demo.mp4" type="video/mp4" >
+			</video>
+
+		</div>
+
+		<div class="text">&copy Grace Zijin Gao Nov. 05 2018</div>
+	</div>
+
+</body>
+</html>
