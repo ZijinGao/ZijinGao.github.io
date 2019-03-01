@@ -11,6 +11,9 @@ body{
 	font-weight: lighter;
 
 }
+a{
+	color: white;
+}
 a:link{
 	text-decoration:none;
 }
