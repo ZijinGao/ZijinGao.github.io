@@ -8,8 +8,9 @@ body{
 
 	text-align: left;
 	color: #DEDEDE;
-}
+	font-weight: lighter;
 
+}
 a{
 	color: white;
 }
@@ -26,7 +27,7 @@ a:active{
 	text-decoration: none;
 }
 img{
-	width: 820px;
+	width: 55vw;
 }
 
 #left{
@@ -42,19 +43,13 @@ img{
 #logo{
 	width: 250px;
 }
-
 #sideindex{
 	margin-top: 10vh;
-	/*display: flex;
-	flex-direction: column;
-	align-items: flex-start;*/
 
 }
 #links{
 	margin-top: 10vh;
-	/*display: flex;
-	flex-direction: column;
-	align-items: flex-start;*/
+	
 }
 #about{
 	text-align: left;
@@ -74,14 +69,17 @@ img{
 .instance{
 
 }
+#name{
+	font-size: 2rem;
+}
 .coverpic{
-	filter: grayscale(95%);
 }
 .coverpic:hover{
-	filter: grayscale(0);
 }
 .coverdes{
 	color: #DEDEDE;
 	margin-top: 1vh;
 	margin-bottom: 5vh;
+
+	width: 55vw;
 }
